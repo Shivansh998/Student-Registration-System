@@ -1,0 +1,116 @@
+/* Container styling */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    background: linear-gradient(to right, #ffcccc, #ccffcc, #ccccff);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Form styling */
+.form-container {
+    float: left;
+    width: 33%;
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    margin: 5px 0;
+}
+
+form input {
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 90%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    padding: 10px;
+    background-color: #5c5c8a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 50px;
+}
+
+form button:hover {
+    background-color: #4d4d73;
+}
+
+/* Table styling */
+.table-container {
+    float: right;
+    width: 57%;
+    padding: 20px;
+    background-color: rgba(0, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #000;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #ccccff;
+}
+
+.actions button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.actions .edit {
+    background-color: grey;
+    color: white;
+}
+
+.actions .delete {
+    background-color: grey;
+    color: white;
+}
+
+/* Clear floats */
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+tbody {
+    display: block;
+    max-height: 200px; /* Set the maximum height for scrolling */
+    overflow-y: auto; 
+    overflow-x: hidden; /* Enable vertical scrolling */
+}
+
+thead, tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed; /* Make sure table columns are aligned */
+}
